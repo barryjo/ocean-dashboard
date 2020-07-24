@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Express.js server to query apps from Google sheets (as database)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel ./src -d ./dist --source-map",
+    "start": "npm run build && node -r source-map-support/register dist/index.js",
+    "dev": "nodemon src/index.js --exec babel-node"
+  },
+  "author": "barryjo",
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-dotenv": "^0.1.1",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.2"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.2",
+    "axios": "^0.19.2",
+    "cors": "^2.8.4",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "express-json-validator-middleware": "^1.2.3",
+    "google-spreadsheet": "^2.0.6",
+    "qs": "^6.6.0",
+    "replace-in-file": "^6.1.0",
+    "source-map-support": "^0.5.19",
+    "uuid": "^3.4.0",
+    "winston": "^3.1.0"
+  }
+}
